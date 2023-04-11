@@ -26,7 +26,7 @@ namespace Mediapipe {
           string.Concat(
             "CjltZWRpYXBpcGUvY2FsY3VsYXRvcnMvdGZsaXRlL3NzZF9hbmNob3JzX2Nh",
             "bGN1bGF0b3IucHJvdG8SCW1lZGlhcGlwZRokbWVkaWFwaXBlL2ZyYW1ld29y",
-            "ay9jYWxjdWxhdG9yLnByb3RvIvgDChtTc2RBbmNob3JzQ2FsY3VsYXRvck9w",
+            "ay9jYWxjdWxhdG9yLnByb3RvIq0FChtTc2RBbmNob3JzQ2FsY3VsYXRvck9w",
             "dGlvbnMSGAoQaW5wdXRfc2l6ZV93aWR0aBgBIAEoBRIZChFpbnB1dF9zaXpl",
             "X2hlaWdodBgCIAEoBRIRCgltaW5fc2NhbGUYAyABKAISEQoJbWF4X3NjYWxl",
             "GAQgASgCEhwKD2FuY2hvcl9vZmZzZXRfeBgFIAEoAjoDMC41EhwKD2FuY2hv",
@@ -35,13 +35,17 @@ namespace Mediapipe {
             "GAkgAygFEg8KB3N0cmlkZXMYCiADKAUSFQoNYXNwZWN0X3JhdGlvcxgLIAMo",
             "AhIrChxyZWR1Y2VfYm94ZXNfaW5fbG93ZXN0X2xheWVyGAwgASgIOgVmYWxz",
             "ZRIqCh9pbnRlcnBvbGF0ZWRfc2NhbGVfYXNwZWN0X3JhdGlvGA0gASgCOgEx",
-            "EiAKEWZpeGVkX2FuY2hvcl9zaXplGA4gASgIOgVmYWxzZTJUCgNleHQSHC5t",
-            "ZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMY/7jzdSABKAsyJi5tZWRpYXBp",
-            "cGUuU3NkQW5jaG9yc0NhbGN1bGF0b3JPcHRpb25z"));
+            "EiAKEWZpeGVkX2FuY2hvcl9zaXplGA4gASgIOgVmYWxzZRIrChxtdWx0aXNj",
+            "YWxlX2FuY2hvcl9nZW5lcmF0aW9uGA8gASgIOgVmYWxzZRIUCgltaW5fbGV2",
+            "ZWwYECABKAU6ATMSFAoJbWF4X2xldmVsGBEgASgFOgE3EhcKDGFuY2hvcl9z",
+            "Y2FsZRgSIAEoAjoBNBIcChFzY2FsZXNfcGVyX29jdGF2ZRgTIAEoBToBMhIj",
+            "ChVub3JtYWxpemVfY29vcmRpbmF0ZXMYFCABKAg6BHRydWUyVAoDZXh0Ehwu",
+            "bWVkaWFwaXBlLkNhbGN1bGF0b3JPcHRpb25zGP+483UgASgLMiYubWVkaWFw",
+            "aXBlLlNzZEFuY2hvcnNDYWxjdWxhdG9yT3B0aW9ucw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.SsdAnchorsCalculatorOptions), global::Mediapipe.SsdAnchorsCalculatorOptions.Parser, new[]{ "InputSizeWidth", "InputSizeHeight", "MinScale", "MaxScale", "AnchorOffsetX", "AnchorOffsetY", "NumLayers", "FeatureMapWidth", "FeatureMapHeight", "Strides", "AspectRatios", "ReduceBoxesInLowestLayer", "InterpolatedScaleAspectRatio", "FixedAnchorSize" }, null, null, new pb::Extension[] { global::Mediapipe.SsdAnchorsCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.SsdAnchorsCalculatorOptions), global::Mediapipe.SsdAnchorsCalculatorOptions.Parser, new[]{ "InputSizeWidth", "InputSizeHeight", "MinScale", "MaxScale", "AnchorOffsetX", "AnchorOffsetY", "NumLayers", "FeatureMapWidth", "FeatureMapHeight", "Strides", "AspectRatios", "ReduceBoxesInLowestLayer", "InterpolatedScaleAspectRatio", "FixedAnchorSize", "MultiscaleAnchorGeneration", "MinLevel", "MaxLevel", "AnchorScale", "ScalesPerOctave", "NormalizeCoordinates" }, null, null, new pb::Extension[] { global::Mediapipe.SsdAnchorsCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -101,6 +105,12 @@ namespace Mediapipe {
       reduceBoxesInLowestLayer_ = other.reduceBoxesInLowestLayer_;
       interpolatedScaleAspectRatio_ = other.interpolatedScaleAspectRatio_;
       fixedAnchorSize_ = other.fixedAnchorSize_;
+      multiscaleAnchorGeneration_ = other.multiscaleAnchorGeneration_;
+      minLevel_ = other.minLevel_;
+      maxLevel_ = other.maxLevel_;
+      anchorScale_ = other.anchorScale_;
+      scalesPerOctave_ = other.scalesPerOctave_;
+      normalizeCoordinates_ = other.normalizeCoordinates_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -470,6 +480,194 @@ namespace Mediapipe {
       _hasBits0 &= ~512;
     }
 
+    /// <summary>Field number for the "multiscale_anchor_generation" field.</summary>
+    public const int MultiscaleAnchorGenerationFieldNumber = 15;
+    private readonly static bool MultiscaleAnchorGenerationDefaultValue = false;
+
+    private bool multiscaleAnchorGeneration_;
+    /// <summary>
+    /// Generates grid anchors on the fly corresponding to multiple CNN layers as
+    /// described in:
+    /// "Focal Loss for Dense Object Detection" (https://arxiv.org/abs/1708.02002)
+    ///  T.-Y. Lin, P. Goyal, R. Girshick, K. He, P. Dollar
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MultiscaleAnchorGeneration {
+      get { if ((_hasBits0 & 1024) != 0) { return multiscaleAnchorGeneration_; } else { return MultiscaleAnchorGenerationDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        multiscaleAnchorGeneration_ = value;
+      }
+    }
+    /// <summary>Gets whether the "multiscale_anchor_generation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMultiscaleAnchorGeneration {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "multiscale_anchor_generation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMultiscaleAnchorGeneration() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "min_level" field.</summary>
+    public const int MinLevelFieldNumber = 16;
+    private readonly static int MinLevelDefaultValue = 3;
+
+    private int minLevel_;
+    /// <summary>
+    /// minimum level in feature pyramid
+    /// for multiscale_anchor_generation only!
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinLevel {
+      get { if ((_hasBits0 & 2048) != 0) { return minLevel_; } else { return MinLevelDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        minLevel_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_level" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinLevel {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "min_level" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinLevel() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "max_level" field.</summary>
+    public const int MaxLevelFieldNumber = 17;
+    private readonly static int MaxLevelDefaultValue = 7;
+
+    private int maxLevel_;
+    /// <summary>
+    /// maximum level in feature pyramid
+    /// for multiscale_anchor_generation only!
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxLevel {
+      get { if ((_hasBits0 & 4096) != 0) { return maxLevel_; } else { return MaxLevelDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        maxLevel_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_level" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxLevel {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "max_level" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxLevel() {
+      _hasBits0 &= ~4096;
+    }
+
+    /// <summary>Field number for the "anchor_scale" field.</summary>
+    public const int AnchorScaleFieldNumber = 18;
+    private readonly static float AnchorScaleDefaultValue = 4F;
+
+    private float anchorScale_;
+    /// <summary>
+    /// Scale of anchor to feature stride
+    /// for multiscale_anchor_generation only!
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AnchorScale {
+      get { if ((_hasBits0 & 8192) != 0) { return anchorScale_; } else { return AnchorScaleDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        anchorScale_ = value;
+      }
+    }
+    /// <summary>Gets whether the "anchor_scale" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnchorScale {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "anchor_scale" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnchorScale() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "scales_per_octave" field.</summary>
+    public const int ScalesPerOctaveFieldNumber = 19;
+    private readonly static int ScalesPerOctaveDefaultValue = 2;
+
+    private int scalesPerOctave_;
+    /// <summary>
+    /// Number of intermediate scale each scale octave
+    /// for multiscale_anchor_generation only!
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ScalesPerOctave {
+      get { if ((_hasBits0 & 16384) != 0) { return scalesPerOctave_; } else { return ScalesPerOctaveDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        scalesPerOctave_ = value;
+      }
+    }
+    /// <summary>Gets whether the "scales_per_octave" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasScalesPerOctave {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "scales_per_octave" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScalesPerOctave() {
+      _hasBits0 &= ~16384;
+    }
+
+    /// <summary>Field number for the "normalize_coordinates" field.</summary>
+    public const int NormalizeCoordinatesFieldNumber = 20;
+    private readonly static bool NormalizeCoordinatesDefaultValue = true;
+
+    private bool normalizeCoordinates_;
+    /// <summary>
+    /// Whether to produce anchors in normalized coordinates.
+    /// for multiscale_anchor_generation only!
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NormalizeCoordinates {
+      get { if ((_hasBits0 & 32768) != 0) { return normalizeCoordinates_; } else { return NormalizeCoordinatesDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        normalizeCoordinates_ = value;
+      }
+    }
+    /// <summary>Gets whether the "normalize_coordinates" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNormalizeCoordinates {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "normalize_coordinates" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNormalizeCoordinates() {
+      _hasBits0 &= ~32768;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -499,6 +697,12 @@ namespace Mediapipe {
       if (ReduceBoxesInLowestLayer != other.ReduceBoxesInLowestLayer) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InterpolatedScaleAspectRatio, other.InterpolatedScaleAspectRatio)) return false;
       if (FixedAnchorSize != other.FixedAnchorSize) return false;
+      if (MultiscaleAnchorGeneration != other.MultiscaleAnchorGeneration) return false;
+      if (MinLevel != other.MinLevel) return false;
+      if (MaxLevel != other.MaxLevel) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AnchorScale, other.AnchorScale)) return false;
+      if (ScalesPerOctave != other.ScalesPerOctave) return false;
+      if (NormalizeCoordinates != other.NormalizeCoordinates) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -520,6 +724,12 @@ namespace Mediapipe {
       if (HasReduceBoxesInLowestLayer) hash ^= ReduceBoxesInLowestLayer.GetHashCode();
       if (HasInterpolatedScaleAspectRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InterpolatedScaleAspectRatio);
       if (HasFixedAnchorSize) hash ^= FixedAnchorSize.GetHashCode();
+      if (HasMultiscaleAnchorGeneration) hash ^= MultiscaleAnchorGeneration.GetHashCode();
+      if (HasMinLevel) hash ^= MinLevel.GetHashCode();
+      if (HasMaxLevel) hash ^= MaxLevel.GetHashCode();
+      if (HasAnchorScale) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AnchorScale);
+      if (HasScalesPerOctave) hash ^= ScalesPerOctave.GetHashCode();
+      if (HasNormalizeCoordinates) hash ^= NormalizeCoordinates.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -582,6 +792,30 @@ namespace Mediapipe {
         output.WriteRawTag(112);
         output.WriteBool(FixedAnchorSize);
       }
+      if (HasMultiscaleAnchorGeneration) {
+        output.WriteRawTag(120);
+        output.WriteBool(MultiscaleAnchorGeneration);
+      }
+      if (HasMinLevel) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MinLevel);
+      }
+      if (HasMaxLevel) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt32(MaxLevel);
+      }
+      if (HasAnchorScale) {
+        output.WriteRawTag(149, 1);
+        output.WriteFloat(AnchorScale);
+      }
+      if (HasScalesPerOctave) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(ScalesPerOctave);
+      }
+      if (HasNormalizeCoordinates) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(NormalizeCoordinates);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -636,6 +870,30 @@ namespace Mediapipe {
         output.WriteRawTag(112);
         output.WriteBool(FixedAnchorSize);
       }
+      if (HasMultiscaleAnchorGeneration) {
+        output.WriteRawTag(120);
+        output.WriteBool(MultiscaleAnchorGeneration);
+      }
+      if (HasMinLevel) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MinLevel);
+      }
+      if (HasMaxLevel) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt32(MaxLevel);
+      }
+      if (HasAnchorScale) {
+        output.WriteRawTag(149, 1);
+        output.WriteFloat(AnchorScale);
+      }
+      if (HasScalesPerOctave) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(ScalesPerOctave);
+      }
+      if (HasNormalizeCoordinates) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(NormalizeCoordinates);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -679,6 +937,24 @@ namespace Mediapipe {
       }
       if (HasFixedAnchorSize) {
         size += 1 + 1;
+      }
+      if (HasMultiscaleAnchorGeneration) {
+        size += 1 + 1;
+      }
+      if (HasMinLevel) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MinLevel);
+      }
+      if (HasMaxLevel) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MaxLevel);
+      }
+      if (HasAnchorScale) {
+        size += 2 + 4;
+      }
+      if (HasScalesPerOctave) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(ScalesPerOctave);
+      }
+      if (HasNormalizeCoordinates) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -725,6 +1001,24 @@ namespace Mediapipe {
       }
       if (other.HasFixedAnchorSize) {
         FixedAnchorSize = other.FixedAnchorSize;
+      }
+      if (other.HasMultiscaleAnchorGeneration) {
+        MultiscaleAnchorGeneration = other.MultiscaleAnchorGeneration;
+      }
+      if (other.HasMinLevel) {
+        MinLevel = other.MinLevel;
+      }
+      if (other.HasMaxLevel) {
+        MaxLevel = other.MaxLevel;
+      }
+      if (other.HasAnchorScale) {
+        AnchorScale = other.AnchorScale;
+      }
+      if (other.HasScalesPerOctave) {
+        ScalesPerOctave = other.ScalesPerOctave;
+      }
+      if (other.HasNormalizeCoordinates) {
+        NormalizeCoordinates = other.NormalizeCoordinates;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -801,6 +1095,30 @@ namespace Mediapipe {
             FixedAnchorSize = input.ReadBool();
             break;
           }
+          case 120: {
+            MultiscaleAnchorGeneration = input.ReadBool();
+            break;
+          }
+          case 128: {
+            MinLevel = input.ReadInt32();
+            break;
+          }
+          case 136: {
+            MaxLevel = input.ReadInt32();
+            break;
+          }
+          case 149: {
+            AnchorScale = input.ReadFloat();
+            break;
+          }
+          case 152: {
+            ScalesPerOctave = input.ReadInt32();
+            break;
+          }
+          case 160: {
+            NormalizeCoordinates = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -874,6 +1192,30 @@ namespace Mediapipe {
           }
           case 112: {
             FixedAnchorSize = input.ReadBool();
+            break;
+          }
+          case 120: {
+            MultiscaleAnchorGeneration = input.ReadBool();
+            break;
+          }
+          case 128: {
+            MinLevel = input.ReadInt32();
+            break;
+          }
+          case 136: {
+            MaxLevel = input.ReadInt32();
+            break;
+          }
+          case 149: {
+            AnchorScale = input.ReadFloat();
+            break;
+          }
+          case 152: {
+            ScalesPerOctave = input.ReadInt32();
+            break;
+          }
+          case 160: {
+            NormalizeCoordinates = input.ReadBool();
             break;
           }
         }

@@ -25,24 +25,21 @@ namespace Mediapipe {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CkFtZWRpYXBpcGUvY2FsY3VsYXRvcnMvaW1hZ2UvaW1hZ2VfdHJhbnNmb3Jt",
-            "YXRpb25fY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUv",
-            "ZnJhbWV3b3JrL2NhbGN1bGF0b3IucHJvdG8aHm1lZGlhcGlwZS9ncHUvc2Nh",
-            "bGVfbW9kZS5wcm90byJoCgxSb3RhdGlvbk1vZGUiWAoETW9kZRILCgdVTktO",
-            "T1dOEAASDgoKUk9UQVRJT05fMBABEg8KC1JPVEFUSU9OXzkwEAISEAoMUk9U",
-            "QVRJT05fMTgwEAMSEAoMUk9UQVRJT05fMjcwEAQi/gIKJEltYWdlVHJhbnNm",
-            "b3JtYXRpb25DYWxjdWxhdG9yT3B0aW9ucxIXCgxvdXRwdXRfd2lkdGgYASAB",
-            "KAU6ATASGAoNb3V0cHV0X2hlaWdodBgCIAEoBToBMBIzCg1yb3RhdGlvbl9t",
-            "b2RlGAMgASgOMhwubWVkaWFwaXBlLlJvdGF0aW9uTW9kZS5Nb2RlEh4KD2Zs",
-            "aXBfdmVydGljYWxseRgEIAEoCDoFZmFsc2USIAoRZmxpcF9ob3Jpem9udGFs",
-            "bHkYBSABKAg6BWZhbHNlEi0KCnNjYWxlX21vZGUYBiABKA4yGS5tZWRpYXBp",
-            "cGUuU2NhbGVNb2RlLk1vZGUSHgoQY29uc3RhbnRfcGFkZGluZxgHIAEoCDoE",
-            "dHJ1ZTJdCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYvv2R",
-            "eCABKAsyLy5tZWRpYXBpcGUuSW1hZ2VUcmFuc2Zvcm1hdGlvbkNhbGN1bGF0",
-            "b3JPcHRpb25z"));
+            "YXRpb25fY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGi9tZWRpYXBpcGUv",
+            "Y2FsY3VsYXRvcnMvaW1hZ2Uvcm90YXRpb25fbW9kZS5wcm90bxokbWVkaWFw",
+            "aXBlL2ZyYW1ld29yay9jYWxjdWxhdG9yLnByb3RvGh5tZWRpYXBpcGUvZ3B1",
+            "L3NjYWxlX21vZGUucHJvdG8i/gIKJEltYWdlVHJhbnNmb3JtYXRpb25DYWxj",
+            "dWxhdG9yT3B0aW9ucxIXCgxvdXRwdXRfd2lkdGgYASABKAU6ATASGAoNb3V0",
+            "cHV0X2hlaWdodBgCIAEoBToBMBIzCg1yb3RhdGlvbl9tb2RlGAMgASgOMhwu",
+            "bWVkaWFwaXBlLlJvdGF0aW9uTW9kZS5Nb2RlEh4KD2ZsaXBfdmVydGljYWxs",
+            "eRgEIAEoCDoFZmFsc2USIAoRZmxpcF9ob3Jpem9udGFsbHkYBSABKAg6BWZh",
+            "bHNlEi0KCnNjYWxlX21vZGUYBiABKA4yGS5tZWRpYXBpcGUuU2NhbGVNb2Rl",
+            "Lk1vZGUSHgoQY29uc3RhbnRfcGFkZGluZxgHIAEoCDoEdHJ1ZTJdCgNleHQS",
+            "HC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYvv2ReCABKAsyLy5tZWRp",
+            "YXBpcGUuSW1hZ2VUcmFuc2Zvcm1hdGlvbkNhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ScaleModeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mediapipe.RotationModeReflection.Descriptor, global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ScaleModeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RotationMode), global::Mediapipe.RotationMode.Parser, null, null, new[]{ typeof(global::Mediapipe.RotationMode.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ImageTransformationCalculatorOptions), global::Mediapipe.ImageTransformationCalculatorOptions.Parser, new[]{ "OutputWidth", "OutputHeight", "RotationMode", "FlipVertically", "FlipHorizontally", "ScaleMode", "ConstantPadding" }, null, null, new pb::Extension[] { global::Mediapipe.ImageTransformationCalculatorOptions.Extensions.Ext }, null)
           }));
     }
@@ -50,177 +47,6 @@ namespace Mediapipe {
 
   }
   #region Messages
-  /// <summary>
-  /// Counterclockwise rotation.
-  /// </summary>
-  public sealed partial class RotationMode : pb::IMessage<RotationMode>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<RotationMode> _parser = new pb::MessageParser<RotationMode>(() => new RotationMode());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<RotationMode> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode(RotationMode other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode Clone() {
-      return new RotationMode(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as RotationMode);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(RotationMode other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(RotationMode other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-        }
-      }
-    }
-    #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the RotationMode message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      public enum Mode {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("ROTATION_0")] Rotation0 = 1,
-        [pbr::OriginalName("ROTATION_90")] Rotation90 = 2,
-        [pbr::OriginalName("ROTATION_180")] Rotation180 = 3,
-        [pbr::OriginalName("ROTATION_270")] Rotation270 = 4,
-      }
-
-    }
-    #endregion
-
-  }
-
   public sealed partial class ImageTransformationCalculatorOptions : pb::IMessage<ImageTransformationCalculatorOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -236,7 +62,7 @@ namespace Mediapipe {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

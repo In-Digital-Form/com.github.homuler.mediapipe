@@ -28,7 +28,7 @@ namespace Mediapipe {
             "GhptZWRpYXBpcGUvdXRpbC9jb2xvci5wcm90byKNAQoKUmVuZGVyRGF0YRI3",
             "ChJyZW5kZXJfYW5ub3RhdGlvbnMYASADKAsyGy5tZWRpYXBpcGUuUmVuZGVy",
             "QW5ub3RhdGlvbhITCgtzY2VuZV9jbGFzcxgCIAEoCRIxCg5zY2VuZV92aWV3",
-            "cG9ydBgDIAEoCzIZLm1lZGlhcGlwZS5SZW5kZXJWaWV3cG9ydCKzEQoQUmVu",
+            "cG9ydBgDIAEoCzIZLm1lZGlhcGlwZS5SZW5kZXJWaWV3cG9ydCL6EQoQUmVu",
             "ZGVyQW5ub3RhdGlvbhI6CglyZWN0YW5nbGUYASABKAsyJS5tZWRpYXBpcGUu",
             "UmVuZGVyQW5ub3RhdGlvbi5SZWN0YW5nbGVIABJHChBmaWxsZWRfcmVjdGFu",
             "Z2xlGAIgASgLMisubWVkaWFwaXBlLlJlbmRlckFubm90YXRpb24uRmlsbGVk",
@@ -73,14 +73,16 @@ namespace Mediapipe {
             "b2xvcjEYBiABKAsyEC5tZWRpYXBpcGUuQ29sb3ISIAoGY29sb3IyGAcgASgL",
             "MhAubWVkaWFwaXBlLkNvbG9yGmIKBUFycm93Eg8KB3hfc3RhcnQYASABKAES",
             "DwoHeV9zdGFydBgCIAEoARINCgV4X2VuZBgDIAEoARINCgV5X2VuZBgEIAEo",
-            "ARIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRrLAQoEVGV4dBIUCgxkaXNw",
+            "ARIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRqSAgoEVGV4dBIUCgxkaXNw",
             "bGF5X3RleHQYASABKAkSDAoEbGVmdBgCIAEoARIQCghiYXNlbGluZRgDIAEo",
             "ARIWCgtmb250X2hlaWdodBgEIAEoAToBOBIZCgpub3JtYWxpemVkGAUgASgI",
             "OgVmYWxzZRIUCglmb250X2ZhY2UYBiABKAU6ATASIgoTY2VudGVyX2hvcml6",
             "b250YWxseRgHIAEoCDoFZmFsc2USIAoRY2VudGVyX3ZlcnRpY2FsbHkYCCAB",
-            "KAg6BWZhbHNlQgYKBGRhdGEiWwoOUmVuZGVyVmlld3BvcnQSCgoCaWQYASAB",
-            "KAkSEAoId2lkdGhfcHgYAiABKAUSEQoJaGVpZ2h0X3B4GAMgASgFEhgKEGNv",
-            "bXBvc2Vfb25fdmlkZW8YBCABKAg="));
+            "KAg6BWZhbHNlEhwKEW91dGxpbmVfdGhpY2tuZXNzGAsgASgBOgEwEicKDW91",
+            "dGxpbmVfY29sb3IYDCABKAsyEC5tZWRpYXBpcGUuQ29sb3JCBgoEZGF0YSJb",
+            "Cg5SZW5kZXJWaWV3cG9ydBIKCgJpZBgBIAEoCRIQCgh3aWR0aF9weBgCIAEo",
+            "BRIRCgloZWlnaHRfcHgYAyABKAUSGAoQY29tcG9zZV9vbl92aWRlbxgEIAEo",
+            "CA=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.ColorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +97,7 @@ namespace Mediapipe {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Line), global::Mediapipe.RenderAnnotation.Types.Line.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized", "LineType" }, null, new[]{ typeof(global::Mediapipe.RenderAnnotation.Types.Line.Types.LineType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.GradientLine), global::Mediapipe.RenderAnnotation.Types.GradientLine.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized", "Color1", "Color2" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Arrow), global::Mediapipe.RenderAnnotation.Types.Arrow.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Text), global::Mediapipe.RenderAnnotation.Types.Text.Parser, new[]{ "DisplayText", "Left", "Baseline", "FontHeight", "Normalized", "FontFace", "CenterHorizontally", "CenterVertically" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Text), global::Mediapipe.RenderAnnotation.Types.Text.Parser, new[]{ "DisplayText", "Left", "Baseline", "FontHeight", "Normalized", "FontFace", "CenterHorizontally", "CenterVertically", "OutlineThickness", "OutlineColor" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderViewport), global::Mediapipe.RenderViewport.Parser, new[]{ "Id", "WidthPx", "HeightPx", "ComposeOnVideo" }, null, null, null, null)
           }));
     }
@@ -4874,6 +4876,8 @@ namespace Mediapipe {
           fontFace_ = other.fontFace_;
           centerHorizontally_ = other.centerHorizontally_;
           centerVertically_ = other.centerVertically_;
+          outlineThickness_ = other.outlineThickness_;
+          outlineColor_ = other.outlineColor_ != null ? other.outlineColor_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5123,6 +5127,51 @@ namespace Mediapipe {
           _hasBits0 &= ~64;
         }
 
+        /// <summary>Field number for the "outline_thickness" field.</summary>
+        public const int OutlineThicknessFieldNumber = 11;
+        private readonly static double OutlineThicknessDefaultValue = 0D;
+
+        private double outlineThickness_;
+        /// <summary>
+        /// Thickness of the text outline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double OutlineThickness {
+          get { if ((_hasBits0 & 128) != 0) { return outlineThickness_; } else { return OutlineThicknessDefaultValue; } }
+          set {
+            _hasBits0 |= 128;
+            outlineThickness_ = value;
+          }
+        }
+        /// <summary>Gets whether the "outline_thickness" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOutlineThickness {
+          get { return (_hasBits0 & 128) != 0; }
+        }
+        /// <summary>Clears the value of the "outline_thickness" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOutlineThickness() {
+          _hasBits0 &= ~128;
+        }
+
+        /// <summary>Field number for the "outline_color" field.</summary>
+        public const int OutlineColorFieldNumber = 12;
+        private global::Mediapipe.Color outlineColor_;
+        /// <summary>
+        /// Color of the text outline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Mediapipe.Color OutlineColor {
+          get { return outlineColor_; }
+          set {
+            outlineColor_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5146,6 +5195,8 @@ namespace Mediapipe {
           if (FontFace != other.FontFace) return false;
           if (CenterHorizontally != other.CenterHorizontally) return false;
           if (CenterVertically != other.CenterVertically) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(OutlineThickness, other.OutlineThickness)) return false;
+          if (!object.Equals(OutlineColor, other.OutlineColor)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5161,6 +5212,8 @@ namespace Mediapipe {
           if (HasFontFace) hash ^= FontFace.GetHashCode();
           if (HasCenterHorizontally) hash ^= CenterHorizontally.GetHashCode();
           if (HasCenterVertically) hash ^= CenterVertically.GetHashCode();
+          if (HasOutlineThickness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(OutlineThickness);
+          if (outlineColor_ != null) hash ^= OutlineColor.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5211,6 +5264,14 @@ namespace Mediapipe {
             output.WriteRawTag(64);
             output.WriteBool(CenterVertically);
           }
+          if (HasOutlineThickness) {
+            output.WriteRawTag(89);
+            output.WriteDouble(OutlineThickness);
+          }
+          if (outlineColor_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(OutlineColor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5253,6 +5314,14 @@ namespace Mediapipe {
             output.WriteRawTag(64);
             output.WriteBool(CenterVertically);
           }
+          if (HasOutlineThickness) {
+            output.WriteRawTag(89);
+            output.WriteDouble(OutlineThickness);
+          }
+          if (outlineColor_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(OutlineColor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5286,6 +5355,12 @@ namespace Mediapipe {
           }
           if (HasCenterVertically) {
             size += 1 + 1;
+          }
+          if (HasOutlineThickness) {
+            size += 1 + 8;
+          }
+          if (outlineColor_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutlineColor);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5322,6 +5397,15 @@ namespace Mediapipe {
           }
           if (other.HasCenterVertically) {
             CenterVertically = other.CenterVertically;
+          }
+          if (other.HasOutlineThickness) {
+            OutlineThickness = other.OutlineThickness;
+          }
+          if (other.outlineColor_ != null) {
+            if (outlineColor_ == null) {
+              OutlineColor = new global::Mediapipe.Color();
+            }
+            OutlineColor.MergeFrom(other.OutlineColor);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5370,6 +5454,17 @@ namespace Mediapipe {
                 CenterVertically = input.ReadBool();
                 break;
               }
+              case 89: {
+                OutlineThickness = input.ReadDouble();
+                break;
+              }
+              case 98: {
+                if (outlineColor_ == null) {
+                  OutlineColor = new global::Mediapipe.Color();
+                }
+                input.ReadMessage(OutlineColor);
+                break;
+              }
             }
           }
         #endif
@@ -5415,6 +5510,17 @@ namespace Mediapipe {
               }
               case 64: {
                 CenterVertically = input.ReadBool();
+                break;
+              }
+              case 89: {
+                OutlineThickness = input.ReadDouble();
+                break;
+              }
+              case 98: {
+                if (outlineColor_ == null) {
+                  OutlineColor = new global::Mediapipe.Color();
+                }
+                input.ReadMessage(OutlineColor);
                 break;
               }
             }
